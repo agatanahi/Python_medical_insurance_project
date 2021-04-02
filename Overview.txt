@@ -1,0 +1,63 @@
+Project Overview:
+
+Per CodeAcademy:
+    Objectives:
+        Work locally on your own computer
+        Import a dataset into your program
+        Analyze a dataset by building out functions or class methods
+        Use libraries to assist in your analysis
+        Optional: Document and organize your findings
+        Optional: Make predictions about a dataset’s features based on your findings
+
+
+        Setup:
+            For this project, we expect that you have a basic understanding of Python fundamentals, including how to usw 
+            functions and/or classes as well as how to work with CSV files. The tasks and project solution code are tailored 
+            towards someone with this knowledge base.
+
+            If you know Python libraries or skills that extend beyond this expectation (such as NumPy or pandas), you are 
+            encouraged to use them. This project is meant for you to show off your knowledge, so do not feel constrained by the 
+            tasks or hints written out.
+
+
+                                               MY NOTES
+                                               
+The breakdown of categories: age, sex, bmi, children, smoker, region, charges
+The regions: Northwest, Northeast, Southwest, Southeast --- no Midwest...so that's gonna throw everything off for my 
+                                                                predictions. Ex: where does Missouri go? 
+
+                                                Project Scope:
+   1.)Which age demographic has the lowest insurance cost?
+   2.)What is the average BMI for each region?
+   3.)Which region has the least amount of female insurers with children?
+    
+                                                 Predictions:
+   1.) The lowest insurance cost age demographic is 25 - 34 (18 - 24 still pro-risk [college, etc], 35 - 45 when life long 
+         illnesses kick in, so shooting for the median) 
+   2.) The average BMI for each region: Southwest: 25.2, Southeast: 29.0, Northwest: 23.9, Northeast: 26.7
+   3.) The region with the least amount of female insurers with children will be the Northwest
+               
+   
+                                    Breakdown of initial thought processes:
+   Two ways to accomplish this: Object Oriented Programming, e.g. class objects, or several functions. 
+    
+   Harder in concept yet easier way may be classes - ex. def the class "Patient" (self, age, sex, bmi, children, smoker, 
+   region, charges) then create a function to parse through the funcitons to calculate the data set. 
+   From there the parsing would be cake. The flip side is being bogged down with errors. Also there will be functions being
+   built throughout the classes. 
+
+   The harder, yet slightly quicker way is to build several functions. The positives are that I can burn through various
+   kwargs and go through the project scope much quicker. However, there are negatives here - one being that it leaves the
+   possibility of errors from recalling many variables. The other is that its probably not particularly efficient. 
+    
+   
+                                           Challenges for initial setup:
+   
+   1.) The data set presents one challenge from the get-go: it s structured almost perfectly for a dictionary style, but it is 
+   missing a key in a key:value pair. 
+       ex: 23,female,39.27,2,no,southeast,3500.6123
+   
+   Solutions: 
+       a.) build an empty list that reads through each line of the CSV file and generates a patient # for each line, thus I can 
+           use an element of a list as a key to pair with a value. 
+       b.) Generate a dictionary without a key pair, and allow Python to generate one. 
